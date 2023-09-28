@@ -1,7 +1,8 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native'
 import { Provider } from 'app/provider'
 import { useFonts } from 'expo-font'
-import { Stack } from 'expo-router'
+import { Stack, Tabs } from 'expo-router'
+import { Drawer } from 'expo-router/drawer'
 import { useColorScheme } from 'react-native'
 
 export default function HomeLayout() {
@@ -17,7 +18,7 @@ export default function HomeLayout() {
   return (
     <Provider>
       <ThemeProvider value={scheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack />
+        <Drawer />
       </ThemeProvider>
     </Provider>
   )
